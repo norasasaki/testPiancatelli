@@ -1,0 +1,36 @@
+body{
+	background-color: rgb(190, 255, 185) !important;
+}
+
+#increment, #reset{
+    background-color: #ffffff;
+	color: black;
+    border:none;
+    border-radius:15px;
+    padding:15px;
+    margin: 10px;
+}
+#reset:active{
+    background-color: red;
+}
+
+#increment:active{
+    background-color: blue;
+}
+
+#littleApp {
+    margin: 0 auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+	background-color:  rgba(0,29,184,0.373284347918855);
+	width: 30%;
+    border-radius:10px;
+	text-align: center;
+}
+
+.contatore{
+	padding: 10%;
+}

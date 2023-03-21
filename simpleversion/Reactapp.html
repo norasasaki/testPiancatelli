@@ -3,42 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<script src="https://fb.me/react-with-addons-0.14.0.js"></script>
-		<script src="https://fb.me/react-dom-0.14.0.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.js"></script>
-
+	<! --script react + babel -->
+	<script src="https://fb.me/react-with-addons-0.14.0.js"></script>
+	<script src="https://fb.me/react-dom-0.14.0.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.js"></script>
+     <! -- link css personalizzato -->
+	<link rel="stylesheet" href="counterstyle.css" >
 </head>
 
 <body>
 
-
+<! -- contenitore per l'applicazione-->
 	<div id="littleApp">
 			
 	</div>
 
-
+<! --script react -->
 	<script type="text/babel">
 		var App = React.createClass({
+		 //setta a 0 il contatore inizialmente
 			getInitialState: function () {
 				return { counter: 0 }
 			},
+			
+			 //funzione che aggiunge +1
 			doAdd: function () {
 				this.setState({ counter: this.state.counter + 1 });
 			},
+			 //funzione che resetta e porta contatore a 0
 			doReset: function () {
 			  this.setState({ counter: 0 });
 			},
+			 //elemenit da renderizzare: i bottoni e il contatore aggiornato
 			render: function () {
 				return (
-					<div className='counter'>
-						<button type="button" className="btn btn-primary" onClick={this.doAdd}>Increment</button>
-						<button type="button" className="btn btn-danger" onClick={this.doReset} >Reset</button>
+					<div className='contatore'>
+						<button type="button" id="increment" className="btn btn-primary" onClick={this.doAdd}>Increment</button>
+						<button type="button" id="reset" className="btn btn-danger" onClick={this.doReset} >Reset</button>
 						&nbsp;
-						<div id="counter" style = {{color: this.state.counter === 0 ? "black" : "red"}}>{this.state.counter}</div>
+						<div id="counter" >Counter: <h4 style = {{color: this.state.counter === 0 ? "black" : "red"}}>{this.state.counter}</h4></div>
 					</div>
 				);
 			}
 		});
+		//Renderizza in var App in littleapp 
 		ReactDOM.render(<App />, document.getElementById('littleApp'));
 	</script>
 	
