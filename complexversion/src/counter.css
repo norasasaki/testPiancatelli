@@ -1,14 +1,21 @@
-#Increment, #resetto{
-    background-color: rgb(190, 255, 185);
+
+
+#increment, #reset{
+	background-color: #ffffff;
+	color: black;
     border:none;
-    border-radius:10px;
+    border-radius:15px;
     padding:15px;
     margin: 10px;
 }
-#resetto:active{
+#reset:active{
     background-color: red;
 }
 
-#Increment:active{
+#increment:active{
     background-color: blue;
+}
+
+.littleApp{
+	padding: 10%;
 }
