@@ -1,0 +1,14 @@
+#Increment, #resetto{
+    background-color: rgb(190, 255, 185);
+    border:none;
+    border-radius:10px;
+    padding:15px;
+    margin: 10px;
+}
+#resetto:active{
+    background-color: red;
+}
+
+#Increment:active{
+    background-color: blue;
+}
